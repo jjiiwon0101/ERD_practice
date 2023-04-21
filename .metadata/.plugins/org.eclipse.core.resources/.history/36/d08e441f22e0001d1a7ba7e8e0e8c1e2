@@ -1,0 +1,41 @@
+package jdbc;
+
+import java.util.Scanner;
+
+public class JDBCinsert {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+        
+        System.out.println("*** 회원 가입 페이지 ***");
+        
+        System.out.print("아이디: ");
+        String id = sc.next();
+        
+        System.out.print("비밀번호: ");
+        String pw = sc.next();
+        
+        System.out.print("이름: ");
+        String name = sc.next();
+        
+        System.out.print("나이: ");
+        int age = sc.nextInt();
+        
+        ///////////////////////////////////////////////
+        
+        //SQL문 작성
+        //SQL문은 String 형태로 작성합니다.
+        //변수가 들어갈 자리에 ?를 채웁니다.
+        String sql = "INSERT INTO members "
+        		+ "(mem_id, mem_pw, mem_name, mem_age) "
+        		+ "VALUES(?,?,?,?)";
+        
+        //DB연동 순서
+        //1. DB 사용자 계정명, 암호, DB url 등 초기 데이터 변수를 설정.
+        String url = "";
+        
+
+	}
+
+}
