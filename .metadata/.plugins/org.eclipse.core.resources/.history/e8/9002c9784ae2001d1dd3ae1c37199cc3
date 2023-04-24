@@ -1,0 +1,29 @@
+package jdbc;
+
+import java.util.Scanner;
+
+public class JdbcUpdate {
+
+	public static void main(String[] args) {
+		
+		//아이디를 입력받으세요.
+		//수정할 이름과 이메일도 입력 받으세요.
+		//지목한 아이디의 이름과 나이를 새로운 값으로 수정해 보세요.
+		//(아이디는 존재하는 아이디를 넣어주셔야 수정이 가능합니다.)
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("*** 회원정보 수정 ***");
+		
+		System.out.println("ID: ");
+		String id = sc.next();
+		
+		System.out.println("NAME: ");
+		String name = sc.next();
+		
+		System.out.println("AGE: ");
+		int age = sc.nextInt();
+
+	}
+
+}

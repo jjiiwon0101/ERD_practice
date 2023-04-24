@@ -1,0 +1,36 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class JdbcSelect {
+
+	public static void main(String[] args) {
+		String sql = "SELECT * FROM members";
+		
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String uid = "hr";
+		String upw = "hr";
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		//객체 하나 더 씀
+		ResultSet rs = null; //SELECT문에서만 사용하는 객체.
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(url, uid, upw);
+			pstmt = conn.prepareStatement(sql);
+			
+			//SELECT문은 executeQuery()를 통해 ResultSet 객체를 받아옵니다.
+			//rs는 SELECT문의 쿼리 실행 결과 전체를 들고 있습니다.
+			pstmt.executeQuery();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}
