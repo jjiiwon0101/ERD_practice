@@ -65,8 +65,7 @@ public class JdbcSelect2 {
 				count++;
 				
 				System.out.printf("# first_name: %s\n# salary: %s\n", name, salary);
-				System
-				.out.println("----------------------------------------------------------------");
+				System.out.println("----------------------------------------------------------------");
 			}
 			if(count == 0) {
 				System.out.println("조회된 결과 없음.");
